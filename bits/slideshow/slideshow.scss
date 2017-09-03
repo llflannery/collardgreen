@@ -1,0 +1,97 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'bootstrap/mixins/breakpoints';
+.btn-block.display-left, .btn-block.display-right, .btn.btn-block.display-left, .btn.btn-block.display-right {
+  display: inline-block;
+  width: 32px;
+  margin: 0 2px 2px;
+  padding: .175rem .5rem;
+  background-color: $accentcolor;
+  color: #fff;
+  &:hover, &:focus {
+    opacity: .9;
+  }
+  @include media-breakpoint-up(md) {
+    width: 40px;
+    padding: .375rem 1rem;
+  }
+}
+div.btn-block.display-left, div.btn-block.display-right, div.btn.btn-block.display-left, div.btn.btn-block.display-right {
+  cursor: default;
+  opacity: .3;
+  &:hover, &:focus {
+    opacity: .3;
+  }
+}
+.nav-button-container {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+}
+.slide-counter {
+  // font-style: italic;
+  // float: right;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: inherit;
+}
+.slideshow {
+  margin-top: 2em;
+  figcaption {
+    position: relative;
+    height: 8em;
+  }
+  figure {
+    opacity: 1;
+    display: block;
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+    -webkit-animation: opacity .8s;
+    animation: opacity .8s;
+    // position: relative;
+    &.hide-slide {
+      opacity: 0;
+      display: none;
+      // -webkit-animation: height 0.8s;
+      // animation: height 0.8s;
+      // height: 0;
+      // margin: 0;
+    }
+  }
+  // .caption {
+  //   padding-right: 7em;
+  //   position: relative;
+  // }
+  &.fs {
+    // max-width: calc(130vh - 40px);
+    max-width: 135vh;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-only(sm) {
+      h2 {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      padding: 0 40px;      // Keeping the prev/next nav buttons off the slideshow
+      figcaption {
+        padding-left: 0;    // Because the fs slideshow is width-limited to keep it away from prev/next links, unlike fs images
+        padding-right: 0;
+      }
+    }
+  }
+  &.fs, &.column-plus {
+    @include media-breakpoint-up(xl) {
+      padding: 0 40px;      // Keeping the prev/next nav buttons off the slideshow
+    }
+    @include media-breakpoint-only(xs) {
+      h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

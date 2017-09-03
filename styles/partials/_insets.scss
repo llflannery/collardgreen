@@ -1,0 +1,91 @@
+@import "utilities/variables";
+
+// BEGIN IMG-INSET
+
+$columnwidth: $column-width-md;
+$insetwidth: $columnwidth * .75;
+$insetmargin: -($columnwidth * .25);
+$insetposition: ($columnwidth * .5);
+$textmargin: 30px;
+$insetwidthsmall: $columnwidth * .6;
+
+
+
+.inset {
+  // margin-left: 0;
+  // margin-right: 0;
+  @include media-breakpoint-down(xs) {
+    figcaption {
+      @include figcaption-padding;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media-breakpoint-up(md) {
+    width: 700px;
+  }
+  &.inset-small {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    figcaption {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      width: $columnwidth * .5;
+    }
+    @include media-breakpoint-up(md) {
+      width: $columnwidth * .6;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &.inset-left {
+      width: $insetwidth;
+      float: left;
+      margin-left: calc(50% - 480px);
+      margin-right: $textmargin;
+      position: relative;
+      &.inset-small {
+        width: $insetwidthsmall;
+      }
+    }
+    &.inset-right {
+      width: $insetwidth;
+      float: right;
+      margin-right: calc(50% - 480px);
+      margin-left: $textmargin;
+      &.inset-small {
+        width: $insetwidthsmall;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &.inset-left {
+      margin-left: calc(50% - 580px);
+    }
+    &.inset-right {
+      margin-right: calc(50% - 580px);
+    }
+  }
+  &.inset-medrect {
+    width: 300px;
+  }
+}
+
+.inset-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 3px 2px 4px;
+  background-color: #aaaaaa;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  i {
+    color: white;
+  }
+}
+

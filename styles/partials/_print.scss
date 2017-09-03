@@ -1,0 +1,37 @@
+@import 'utilities/variables';
+@media print {
+  body {
+    background-color: #fff;
+  }
+  header {
+    display: hidden;
+    height: 0;
+    * {
+      display: none;
+    }
+  }
+  .fixedimg .image {
+    display: none;
+  }
+  p, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, figcaption , .fs figcaption, .byline, .dateline, .caption, .credit {
+    color: #000 !important;
+    margin: .5em 0 !important;
+    padding: 0 !important;
+    clear: both;
+    width: auto;
+    float: none;
+  }
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-size: 1.8em !important;
+  }
+  p, figcaption , .fs figcaption, .byline, .dateline, .caption, .credit {
+    font-size: 10pt !important;
+  }
+  body {
+    width: 5in;
+    margin: auto !important;
+  }
+  a {
+    color: #000 !important;
+  }
+}

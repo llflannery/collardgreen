@@ -1,0 +1,12 @@
+
+<div class="credits">
+  <h4>{% if $bit.header %}{{ $bit.header }}{% else %}Additional credits{% endif %}</h4>
+  <ul>
+  {% for credit in $bit.credits %}
+    <li>
+      <span class="title">{{ credit.title }}</span>
+      <span class="names">{{ credit.names }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

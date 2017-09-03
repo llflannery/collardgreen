@@ -1,0 +1,30 @@
+{#
+# Optional bit
+# adnumber: // integer from 2 to 4, for medrect2 sted medrect, for example for multiple medrect positions on a page
+#
+# REQUIRED_DATA, these should be provided by advertising for each project. The data names are theirs.
+# zone
+# sitename
+# random
+#}
+<div class="ad-box ad-medrect fs">
+  <div id="medrect{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}" class="medrect">
+    <script type="text/javascript">
+      createAd("medrect{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}",
+      "{{ $bit.zone }}",              {# ex. features_top50restaurants17 #}
+      "medrect{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}",
+      "300x250",
+      "{{ $bit.sitename }}",          {# ex. thingstodo #}
+      "",
+      "{{ $bit.random }}",            {# ex. 666 #}
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "1",
+      "false");
+    </script>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import "utilities/variables";
+.related-links {
+  border: 2px solid #aaa;
+  border-width: 2px 0;
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  &.right {
+    width: 300px;
+    margin-left: 20px;
+    float: right;
+  }
+}
+.related-hed {
+  margin-bottom: .5em;
+  color: #aaa;
+  font-size: 1.4em;
+}
+.related-link {
+  font-family: $font-family-sans-condensed;
+  font-size: 1.2em;
+  list-style-type: none;
+  padding-left: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  li {
+    line-height: 1.3em;
+    padding-bottom: .5em;
+  }
+}

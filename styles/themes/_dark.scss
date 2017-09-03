@@ -1,0 +1,27 @@
+@import "utilities/variables";
+body {
+  background-color: #1d1d1d;
+}
+.byline, .dateline, body {
+  color: #c7c7c7 !important;
+}
+header {
+  // background-color: #1d1d1d;
+}
+a {
+  color: lighten($accentcolor, 30%);
+  &:hover, &:focus {
+    color: lighten($accentcolor, 20%);
+  }
+}
+.gig-comments-container * {
+  font-size: .9rem!important;
+  color: #ddd!important;
+}
+*.gig-comment-body, .gig-comment-body * {
+  color: #e0e0e0!important;
+  line-height: 1.3!important;
+}
+*.gig-comments-composebox *.gig-composebox-data * {
+  color: #333!important;
+}

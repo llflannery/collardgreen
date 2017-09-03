@@ -1,0 +1,18 @@
+header {
+  @include title-gradient-top();
+  height: 60px;
+}
+body {
+    padding: 0;
+}
+.header-logo, .header-home-link, *.gig-bar-container img {
+  -webkit-filter: drop-shadow( 1px 1px 1px #222 );
+  filter: drop-shadow( 1px 1px 1px #222 ); /* Same syntax as box-shadow */
+}
+.tweetline *.gig-bar-container img {
+  -webkit-filter: drop-shadow( 0 0 0 #FFF );
+  filter: drop-shadow( 0 0 0 #FFF ); /* Same syntax as box-shadow */
+}
+.header-home-link {
+  position: absolute !important;
+}

@@ -1,0 +1,10 @@
+@import 'utilities/variables';
+@import 'bootstrap/mixins/breakpoints';
+.ad-box.ad-ldr.fs>div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  @media screen and (min-width: 754px) {
+    width: 728px;
+  }
+}

@@ -1,0 +1,15 @@
+{# a bit for tease cards #}
+<div class="tease-cards{% if $bit.class %} {{ $bit.class }}{% else %} column{% endif %}">
+  {% if $bit.headline %}<h3 class="tease-cards-headline">{{ $bit.headline }}</h3>{% endif %}
+  <div class="cards cards-container">
+  {%- for each in $bit.cards %}
+    <a class="card card-link" href="{{ each.link }}">
+      {%- if each.src %}
+      <div class="tease-cards-img" style="background-image: url('{{ each.src }}');"></div>
+      {% endif -%}
+      <h3 class="tease-cards-head">{{ each.hed }}</h3>
+      <p class="tease-cards-graf">{{ each.blurb }}</p>
+    </a>
+  {%- endfor %}
+  </div>
+</div>

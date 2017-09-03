@@ -1,0 +1,6 @@
+<div class="highlight code{% if $bit.class %} {{ $bit.class }}{% endif %}">
+  {% if $bit.text %}<p><strong>{{ $bit.text }}</strong></p>{% endif %}
+  {% for each in $bit.code -%}
+    <pre><code>{{ each }}</code></pre>
+  {%- endfor %}
+</div>

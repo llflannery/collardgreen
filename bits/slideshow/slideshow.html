@@ -1,0 +1,66 @@
+{# NOTE:
+ # Because this is a loop —
+ # You can't mix up src and directsrc all images need to be from a similar source.
+ # Same with imgtype, captions, credits, and alt it's all or none.
+ # Every slide must have a matching set of bits.
+ #}
+<div id="{{ $bit.id }}-slideshow" class="slideshow {% if $bit.fs %}fs{% elif $bit.plus %}column-plus{% else %}{% endif %}{% if $bit.class %} {{ $bit.class }}{% endif %}">
+  {% if $bit.headline %}<h2>{{ $bit.headline }}</h2>{% endif %}
+  {% for slide in $bit.slides %}
+  <figure class="{{ $bit.id }}-slide {% if loop.first %}hide-slide{% endif %}" {#style="{% if loop.first %}opacity: 1;display: block;{% else %}opacity: 0; display: none;{% endif %}"#}>
+    <img {% if slide.alt %} alt="{{ slide.alt }}" {% endif %}
+      {% if slide.directsrc %} src="{{ slide.directsrc }}"{% else %}
+      src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1500/{{ slide.src | urlencode }}.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %}" srcset="
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ slide.src | urlencode }}.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 480w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ slide.src | urlencode }}.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 600w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ slide.src | urlencode }}-2x.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 960w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ slide.src | urlencode }}.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 1024w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ slide.src | urlencode }}-2x.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 1200w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1500/{{ slide.src | urlencode }}.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 1500w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ slide.src | urlencode }}-2x.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 2048w,
+      //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1500/{{ slide.src | urlencode }}-2x.{% if slide.imgtype %}{{ slide.imgtype }}{% else %}jpg{% endif %} 3000w{% endif %}">
+    <figcaption>
+      
+      <div class="credit"><span class="slide-counter">(Photo {{ loop.index }} of {{ loop.length }})</span>{% if slide.credit %}{{ slide.credit }}{% endif %}</div>
+      
+      <div class="caption">{% if slide.caption %}{{ slide.caption }} {% endif %}</div>
+      <span class="nav-button-container">
+        {% if not loop.first %}
+        <button class="btn btn-block display-left" onclick="{{ $bit.id }}PlusDivs(-1)">❮</button>
+        {% else %}
+        <div class="btn btn-block display-left">❮</div>
+        {% endif %}
+        {% if not loop.last %}
+        <button class="btn btn-block display-right" onclick="{{ $bit.id }}PlusDivs(+1)">❯</button>
+        {% else %}
+        <div class="btn btn-block display-right">❯</div>
+        {% endif %}
+      </span>
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>
+
+<script type="text/javascript">
+  var {{ $bit.id }}SlideIndex = 1;
+  {{ $bit.id }}ShowDivs({{ $bit.id }}SlideIndex);
+  function {{ $bit.id }}PlusDivs(n) {
+      {{ $bit.id }}ShowDivs({{ $bit.id }}SlideIndex += n);
+  }
+  function {{ $bit.id }}ShowDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("{{ $bit.id }}-slide");
+      if (n > x.length) {
+        {{ $bit.id }}SlideIndex = 1
+      }
+      if (n < 1) {
+        {{ $bit.id }}SlideIndex = x.length
+      } ;
+      for (i = 0; i < x.length; i++) {
+          x[i].classList.add('hide-slide');
+          // x[i].setAttribute("style", "display: none; opacity: 0;");
+      }
+      x[{{ $bit.id }}SlideIndex-1].classList.remove('hide-slide');
+      // x[{{ $bit.id }}SlideIndex-1].setAttribute("style", "display: block; opacity: 1;");
+  }
+</script>

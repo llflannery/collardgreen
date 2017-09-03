@@ -1,0 +1,63 @@
+{#
+ # A bit for links to related stories
+ # Set up for 3 to 6 links.
+ # More or fewer links will require more work on the bit.
+ #}
+<div class="read-more-cards card-count-{{ $bit.stories | length }}" id="read-more">
+  {% if $bit.headline %}<h3 class="read-more-cards-hed">{{ $bit.headline }}</h3>{% endif %}
+  <div class="cards cards-container">
+  {%- for each in $bit.stories %}
+    <a class="card card-link" href="{{ each.link }}">
+      {%- if each.src %}
+      <div class="read-more-cards-img" style="background-image: url('{{ each.src }}');"></div>
+      {% endif -%}
+      <h4 class="read-more-head">{{ each.hed }}</h4>
+      <p class="read-more-graf">{{ each.blurb }}</p>
+    </a>
+  {%- endfor %}
+  </div>
+</div>
+{#
+ # Pager for first and last items.
+ # Put previous page as first item,
+ # put next page as last item,
+ # add bit 'pager: true'.
+ # For prev only add bit 'pagerprev: true'.
+ # For next only add bit 'pagernext: true'.
+ #}
+{% if $bit.pager or $bit.pagerprev or $bit.pagernext -%}
+<div class="pager hidden-sm-down" id="pager">
+  {%- if $bit.pager or $bit.pagerprev -%}
+  {%- for each in $bit.stories %}
+  {% if loop.first %}
+  <div class="pager-btn prev">
+    <div class="background-image"></div>
+    <div class="pager-tese">
+      <h5>{{ each.hed }}</h5>
+      <div class="pager-thumbnail" style="background-image: url('{{ each.src }}');">
+      </div>
+      <p>{{ each.blurb }}</p>
+    </div>
+    <a class="pager-overlay" href="{{ each.link }}"></a>
+  </div>
+  {% endif %}
+  {%- endfor %}
+  {% endif %}
+  {%- if $bit.pager or $bit.pagernext -%}
+  {%- for each in $bit.stories %}
+  {% if loop.last %}
+  <div class="pager-btn next">
+    <div class="background-image"></div>
+    <div class="pager-tese">
+      <h5>{{ each.hed }}</h5>
+      <div class="pager-thumbnail" style="background-image: url('{{ each.src }}');">
+      </div>
+      <p>{{ each.blurb }}</p>
+    </div>
+    <a class="pager-overlay" href="{{ each.link }}"></a>
+  </div>
+  {% endif %}
+  {%- endfor %}
+  {% endif %}
+</div>
+{%- endif %}

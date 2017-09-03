@@ -1,0 +1,15 @@
+{# a bit for links to related stories #}
+<div class="read-more">
+  <h3 class="read-more-hed">{{ $bit.headline }}</h3>
+  {%- for each in $bit.stories %}
+  <a href="{{ each.link }}" target="_blank">
+    <div class="article-container">
+      {%- if each.src %}
+      <div class="img-container" style="background-image: url({{ each.src }});{%- if article.position %}background-position: {{ each.position }};{% endif -%}"></div>{% endif -%}
+      <h4>{{ each.hed }}</h4>
+      <p>{{ each.blurb }}</p>
+      <div class="clear"></div>
+    </div>
+  </a>
+  {%- endfor %}
+</div>

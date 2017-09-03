@@ -1,0 +1,29 @@
+{% if $bit.smallpics %}
+  {% if $bit.links -%}
+  <div class="home-links smallpics">
+  {% for link in $bit.links %}
+    {% if link.link %}<a href="{{ link.link }}">{% endif %}
+      {% if link.title %}<h2>{{ link.title }}</h2>{% endif %}
+        {% if link.image %}<img src="{{ link.image }}"/>{% endif %}
+       {% if link.credit %}<div class="credit">{{ link.credit }}</div>{% endif %}
+       <p>{{ link.text }}</p>
+    {% if link.link %}</a>{% endif %}
+  {% endfor %}
+  </div>
+  {% endif -%}
+{% else %}
+  {% if $bit.links -%}
+  <div class="home-links">
+  {% for link in $bit.links %}
+    {% if link.link %}<a href="{{ link.link }}">{% endif %}
+      {% if link.title %}<h2>{{ link.title }}</h2>{% endif %}
+      <figure>
+        {% if link.image %}<img src="{{ link.image }}"/>{% endif %}
+       {% if link.credit %}<div class="credit">{{ link.credit }}</div>{% endif %}
+       <figcaption>{{ link.text }}</figcaption>
+      </figure>
+    {% if link.link %}</a>{% endif %}
+  {% endfor %}
+  </div>
+  {% endif -%}
+{% endif -%}

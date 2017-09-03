@@ -1,0 +1,78 @@
+@import 'utilities/variables';
+@import 'bootstrap/mixins/breakpoints';
+
+// .read-more-container {
+//   margin-top: 3em;
+//   width: 100%;
+//   h3 {
+//     span {
+//       letter-spacing: 5px;
+//       font-size: 0.5em;
+//     }
+//   }
+// }
+.author-container {
+  width: 31.33%;
+  float: left;
+  text-align: right;
+}
+.article-container {
+  padding: 1.5rem 1rem;
+  clear: both;
+  // border-width: 1px 0 0;
+  margin-bottom: .2em;
+  position: relative;
+  color: #222222;
+  overflow: hidden;
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-up(md) {
+    border: 1px solid #cecece;
+    padding: 1rem;
+    margin-bottom: 30px;
+  }
+  &:hover {
+    background-color: white;
+    p {
+      color: #781F11;
+    }
+  }
+  div.img-container {
+    width: 100%;
+    height: 350px;
+    height: 66vw;
+    top: 0;
+    left: 0;
+    background: scroll center center no-repeat;
+    background-size: cover;
+  }
+  h4 {
+    font-size: 1.5em;
+      margin: .5rem 0;
+  }
+  p {
+      margin: 0;
+    font-size: 1em;
+  }
+}
+h3.read-more-hed {
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+@include media-breakpoint-up(md) {
+  h3.read-more-hed {
+    font-size: 1.8em;
+  }
+  .article-container {
+    div.img-container {
+      width: 30%;
+      height: 100%;
+      position: absolute;
+    }
+    h4, p {
+      width: 66%;
+      float: right;
+    }
+  }
+}
+

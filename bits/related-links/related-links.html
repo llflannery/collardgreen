@@ -1,0 +1,8 @@
+<div class="related-links inset{% if $bit.class %} inset-{{ $bit.class }}{% endif -%}{% if $bit.small %} inset-small{% endif %}">
+  <h4 class="related-hed">Related Stories:</h4>
+  <ul class="related-link">
+    {% for item in $bit.links %}
+    <li><a href="{{ item.link }}">{{ item.text }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

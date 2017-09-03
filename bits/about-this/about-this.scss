@@ -1,0 +1,13 @@
+@import 'utilities/variables';
+.about {
+  font-family: $font-family-sans-serif;
+  font-size: .9em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em 0;
+  border: 1px solid #ccc;
+  border-width: 1px 0 1px;
+  p {
+    margin: 0;
+  }
+}

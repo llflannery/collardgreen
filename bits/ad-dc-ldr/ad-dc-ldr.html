@@ -1,0 +1,31 @@
+{#
+# Optional bit
+# adnumber: // integer 2, for ldr2 sted ldr, for second leaderboard position on a page.
+#
+# REQUIRED BITS, these should be provided by advertising for each project. The data names are theirs.
+# zone
+# sitename
+# random
+#}
+<div class="ad-box ad-ldr fs">
+  <div id="ldr{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}" class="ldr">
+    <div id="pagepeel"></div>
+    <script type="text/javascript">
+      createAd("ldr{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}",
+      "{{ $bit.zone }}",              {# ex. features_top50restaurants17 #}
+      "ldr{% if $bit.adnumber %}{{ $bit.adnumber }}{% endif %}",
+      "728x90|300x50",
+      "{{ $bit.sitename }}",          {# ex. thingstodo #}
+      "",
+      "{{ $bit.random }}",            {# ex. 666 #}
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "1",
+      "false");
+    </script>
+  </div>
+</div>

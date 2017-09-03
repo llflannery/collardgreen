@@ -1,0 +1,36 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'bootstrap/mixins/breakpoints';
+.home-links {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  a {
+    figcaption { color: #111; }
+    img { width: 100%; }
+  }
+  h2 {
+    clear: both;
+  }
+}
+.home-links.smallpics {
+  margin-top: 1em;
+  a {
+    margin-bottom: 1em;
+    overflow: hidden;
+    display: block;
+  }
+  img {
+    @include media-breakpoint-up(sm) {
+      width: calc(60% - 10px);
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 5px;
+    }
+    @include media-breakpoint-up(md) {
+      width: calc(40% - 10px);
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 5px;
+    }
+  }
+}

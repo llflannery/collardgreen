@@ -1,0 +1,22 @@
+{#
+ # So it turns out srcset works in Chrome, but sizes has no effect.
+ # At any rate, we're sticking with it, and wait for Chrome to catch up.
+ # Works ok in Safari and great in Firefox.
+ # Docs: https://docs.google.com/document/d/1R1OdNjrrFtgwxuF9nTvEU7S78x-yH2OZ1rq0CDgTZqY/edit#heading=h.i4hk1o460e0p
+ #}
+<figure class="inset{% if $bit.class or $bit.float %}{% if $bit.class %} {{ $bit.class }}{% endif -%} {% if $bit.float %} inset-{{ $bit.float }}{% endif -%}{% endif -%}
+  {% if $bit.small %} inset-small{% endif %}">
+  <img
+    {% if $bit.directsrc %} src="{{ $bit.directsrc }}"{% else %}
+    src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src | urlencode }}.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src | urlencode }}.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src | urlencode }}.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src | urlencode }}-2x.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src | urlencode }}.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src | urlencode }}-2x.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %} 1200w"
+    sizes="{% if $bit.small -%}
+    (min-width: 544px) 340px, calc(70vw - 20px)
+    {% else -%}
+    (min-width: 544px) 500px, 100vw
+    {%- endif %}{% endif %}"{% if $bit.alt %} alt="{{ $bit.alt }}"{% endif %}>
+ {% if $bit.credit or $bit.caption %}<figcaption>
+    {% if $bit.credit %}<div class="credit">{{ $bit.credit | safe }}</div>{% endif %}
+    {% if $bit.caption %}<div class="caption">{{ $bit.caption | safe }}</div>{% endif %}
+  </figcaption>{% endif %}
+</figure>
+

@@ -1,0 +1,68 @@
+/************************
+ * Breaking hub styling *
+ ************************/
+
+$elexGreen: #106910;
+$elexRed: #e23139;
+
+// Font sizes
+h2 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom:10px
+}
+
+// Style story
+.story {
+    padding-left: 25px; /* applies to both p and h3 */ 
+    h3 {
+        text-indent: -25px;
+        font-size: 1.3rem; 
+    }
+}
+.icon-bull {
+    display: inline;
+    .result & { color: $elexGreen; }
+}
+.readMore {
+    @include open-sans-condensed();
+    font-size: 1em;
+    font-weight: bold;
+}
+h3 .readMore {
+  font-size: .8em;
+}
+
+// Story sigs ("UPDATED", "RESULTS", etc)
+.sig {
+    display: none;
+    font-family: 'Open Sans Condensed', 'Helvetica Nueve', sans-serif;
+    font-size: 1em; font-weight: bold;
+    margin-right: 8px;
+    .update &.update-sig { display: inline; color: $elexRed; }
+    .result &.result-sig { display: inline; color: $elexGreen; }
+}
+
+// Big story, no bullets
+.big {
+    .icon-bull { display: none; }
+    h3 { font-size: 2em; text-indent: 0;}
+    &.story { padding-left: 0; }
+}
+
+// Smaller result bullets
+.result {
+    // margin: 0;
+    h3 {
+        font-size: 1.2em; text-indent: 0px; margin: 0;
+    }
+}
+
+
+
+.update {
+  font-family: 'open sans condensed', sans-serif;
+  font-size: 1.1em;
+  text-align: right;
+}

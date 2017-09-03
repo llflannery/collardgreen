@@ -1,0 +1,11 @@
+{# EMBEDDED AD CODE IS FOR TAMPABAY.COM DOMAINS ONLY #
+#
+# This is typically used as the bottom ad position in projects without doubleclick ads.
+# No other data is necessary, but only run on tampabay.com domain.
+# Optional bit.adcode can be used to use other ad code from AML, but it's a litte touchy.
+#}
+<div class="ad-box ad-medrect fs">
+  {%- if $bit.adcode %}{{ $bit.adcode }}{% else %}
+  <script src="http://content.synapsys.us/embeds/inline_300x250/partner.js"></script>
+{% endif -%}
+</div>

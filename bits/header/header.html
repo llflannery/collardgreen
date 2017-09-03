@@ -1,0 +1,48 @@
+<header class="fs">
+  <a class="header-logo-link" href="{{ $bit.baseHref }}">
+    <img class="header-logo hidden-sm-down" src="{{ $bit.brandLogoWideWhite }}" alt="{{ $bit.brandName }}">
+    <img class="header-logo hidden-md-up" src="{{ $bit.brandLogoSmallWhite }}" alt="{{ $bit.brandName }}">
+  </a>
+  <div class="header-social" id="componentDivHeader_gig_containerParent">
+    <script type="text/javascript">
+    var act = new gigya.socialize.UserAction();
+    act.setTitle("{{ $bit.seo.webhed }}");
+    act.setLinkBack("{{ $bit.seo.url }}");
+    act.addMediaItem({
+      type: 'image',
+      src: '{{ $bit.seo.image }}',
+      href: '{{ $bit.seo.url }}'
+    });
+    var showShareBarUI_params = {
+      containerID: 'componentDivHeader',
+      shareButtons: [{
+        provider: 'Facebook',
+        iconImgOver: '{{ $bit.shareSocialIconsFbOver }}',
+        iconImgUp: '{{ $bit.shareSocialIconsFbUp }}'
+      }, {
+        provider: 'Twitter',
+        iconImgOver: '{{ $bit.shareSocialIconsTwOver }}',
+        iconImgUp: '{{ $bit.shareSocialIconsTwUp }}'
+      }, {
+        provider: 'Email',
+        iconImgOver: '{{ $bit.shareSocialIconsEmailOver }}',
+        iconImgUp: '{{ $bit.shareSocialIconsEmailUp }}'
+      }, {
+        provider: 'Share',
+        iconImgOver: '{{ $bit.shareSocialIconsMoreOver }}',
+        iconImgUp: '{{ $bit.shareSocialIconsMoreUp }}'
+      }],
+      iconsOnly: 'true',
+      showCounts: 'none',
+      userAction: act
+    }
+
+    </script>
+    <div id="componentDivHeader" gigid="showShareBarUI" style="visibility: visible;">
+    </div>
+    <script type="text/javascript">
+    gigya.socialize.showShareBarUI(showShareBarUI_params);
+
+    </script>
+  </div>
+</header>

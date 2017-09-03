@@ -1,0 +1,15 @@
+
+{%- if $bit.bullets -%}
+<ul{% if $bit.class %} class="{{ $bit.class }}"{% endif %}>
+    {% for each in $bit.bullets -%}
+    <li>{#{{ each | tweetlines | safe }}#}{{ each | safe }}</li>{# tweetlines not working yet #}
+    {% endfor %}
+</ul>
+{%- endif %}
+{% if $bit.numbered -%}
+<ol{% if $bit.class %} class="{{ $bit.class }}"{% endif %}>
+    {% for each in $bit.numbered -%}
+    <li>{#{{ each | tweetlines | safe }}#}{{ each | safe }}</li>{# tweetlines not working yet #}
+    {% endfor %}
+</ol>
+{%- endif -%}

@@ -1,0 +1,11 @@
+{# EMBEDDED AD CODE IS FOR TAMPABAY.COM DOMAINS ONLY #
+#
+# This is typically used as the top ad position in projects without doubleclick ads.
+# No other data is necessary, but only run on tampabay.com domain.
+# Optional bit.adcode can be used to use other ad code from AML, but it's a litte touchy.
+#}
+<div class="ad-top fs">
+{%- if $bit.adcode %}{{ $bit.adcode }}{% else %}
+  <div id="ld-151-8763"></div><script>(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:9420757126430054,size:[0, 0],id:"ld-151-8763"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdome.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");</script>
+{% endif -%}
+</div>

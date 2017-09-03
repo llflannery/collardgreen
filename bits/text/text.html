@@ -1,0 +1,11 @@
+
+{%- if $bit.id -%}
+<div id="{{ $bit.id }}">
+  {{ $bit.text | linebreaks | safe | tweetlines }}
+</div>
+{%- else -%}
+{{ $bit.text | linebreaks | safe | tweetlines }}
+{%- endif -%}
+
+
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>

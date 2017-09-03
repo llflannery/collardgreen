@@ -1,0 +1,28 @@
+// @import "utilities/variables";
+@import "utilities/mixins";
+@import 'bootstrap/mixins/breakpoints';
+
+.ad-box {
+  @include ad-block();
+}
+
+@include media-breakpoint-up(md) {
+  .ad-top {
+    @include ad-block();
+  }
+}
+
+.lede-block .fs.ad-medrect {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  &.right {
+    @include media-breakpoint-up(md) {
+      float: right;
+      margin: 1em 2em;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-right: calc((100vw - 910px) / 2);
+    }
+  }
+}

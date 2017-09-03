@@ -1,0 +1,98 @@
+@import 'utilities/variables';
+@import 'bootstrap/mixins/breakpoints';
+
+.lede-block>.tease-cards {
+  width: auto;
+  clear: both; // IE10 patch
+  @include media-breakpoint-up(sm) {
+    width: 500px;
+  }
+  @include media-breakpoint-up(md) {
+    width: 700px;
+  }
+  .cards {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .card {
+      margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      margin: 1rem 20px;
+      margin-left: 0;
+      width: 340px;
+      float: left; // IE10 patch
+    }
+      overflow: hidden;
+      display: block;
+    }
+  }
+  &.column .cards .card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+.lede-block>.tease-cards.wide {
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 20px);
+    margin-left:  auto;
+    margin-right: auto;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 1200px;
+  }
+  .cards {
+    .card {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      @include media-breakpoint-up(md) {
+        margin-right: 2%;
+        width: 32%;
+      }
+    }
+  }
+}
+.tease-cards {
+  &-head {
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
+  }
+  &-graf {
+    font-size: .9rem;
+    font-family: $font-family-sans-serif;
+  }
+  &-head, &-graf, &-cards-hed {
+    // padding: 0 10px;
+  }
+  &-img {
+    width: 100%;
+    background-size: cover;
+    height: 51vw;
+    @include media-breakpoint-up (sm){
+      height: 255px;
+    }
+    @include media-breakpoint-up (md){
+      height: 178px;
+    }
+  }
+  &-headline {
+    font-size: 2rem;
+  }
+  &.wide .tease-cards-img {
+    @include media-breakpoint-up (md){
+      height: 16vw;
+    }
+    @include media-breakpoint-up (xl){
+      height: 200px;
+    }
+  }
+}
+a.card-link, a.card-link:hover, a.card-link:visited {
+  color: $gray-dark;
+}

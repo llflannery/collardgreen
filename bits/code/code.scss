@@ -1,0 +1,14 @@
+.highlight {
+  padding: .6em 1em .3em;
+  background-color: #eee;
+  margin-bottom: 1.5em;
+  &.code {
+    overflow-y: scroll;
+    pre {
+      margin-bottom: .5em;
+      code {
+        font-size: .8em;
+      }
+    }
+  }
+}

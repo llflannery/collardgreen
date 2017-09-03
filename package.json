@@ -1,0 +1,14 @@
+
+{
+  "name": "collardgreen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "collardgreen.projectSettings.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ismobile": "^1.0.1",
+    "lede": "^3"
+  }
+}

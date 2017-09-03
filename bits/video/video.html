@@ -1,0 +1,20 @@
+{# Brightcove video player bit
+#
+# Required bits:
+# $bit.video_id
+#
+# Optional bits:
+# $bit.id if needed
+# $bit.class if needed
+# $bit.hed if you want a headline for the video
+# $bit.link if you want a link below the video to other videos, f'rinstance, which also adds a requirement for 
+# $bit.linktext which is the text of that link
+#
+#}
+<div{% if $bit.id %} id="{{ $bit.id }}"{% endif %} class="video{% if $bit.class %} {{ $bit.class }}{% endif %}">
+  {%- if $bit.hed %}<h4>{{ $bit.hed }}</h4>{% endif -%}
+  <video data-video-id="{{ $bit.video_id }}" data-account="1486870331" data-player="default" data-embed="default" class="video-js" id="bcvideo" controls></video><script src="//players.brightcove.net/1486870331/default_default/index.min.js"></script>
+  {% if $bit.link %}
+  <p><a href="{{ $bit.link }}">{{ $bit.linktext }}</a></p>
+  {% endif %}
+</div>

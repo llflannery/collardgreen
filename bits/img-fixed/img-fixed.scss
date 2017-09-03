@@ -1,0 +1,95 @@
+// makes fixed images on mobile devices
+@media screen and (max-width: 1024px) and (max-height: 999px) {
+  .image {
+    display: block;
+    height: 67vw!important;
+    width: 100%!important;
+  }
+}
+.ios .image {
+  display: block;
+  height: 120vw!important; //67hv
+  width: 100%!important;
+}
+@media screen and (max-width: 1024px) and (max-height: 999px) {
+  .ledepic .image {
+    height: 90vh!important;
+  }
+}
+.ios .ledepic .image {
+  height: 90vh!important;
+}
+// end makes fixed images on mobile devices
+
+
+
+.item-1,
+.item-2 {
+	position: absolute;
+  display: block;
+  font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+  letter-spacing: 4px;
+  // font-family: 'Lobster', cursive;
+	top: 1.5em;
+  // left: 10%;
+  width: 100%;
+  font-size: 5em;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 1px 0px rgba(150, 150, 150, 1);
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+    top: 1em;
+    font-size: 4em;
+  }
+}
+
+.item-1{
+	animation-name: anim-1;
+
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+    font-size: 5em;
+  }
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+// .item-3{
+// 	animation-name: anim-3;
+// }
+
+@keyframes anim-1 {
+	0%, 8.3% { opacity: 0; }
+  8.3%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 50% { opacity: 0; }
+  55%, 90.29% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+// @keyframes anim-1 {
+// 	0%, 8.3% { opacity: 0; }
+//   8.3%,25% { opacity: 1; }
+//   33.33%, 100% { opacity: 0; }
+// }
+//
+// @keyframes anim-2 {
+// 	0%, 33.33% { opacity: 0; }
+//   41.63%, 58.29% { opacity: 1; }
+//   66.66%, 100% { opacity: 0; }
+// }
+
+// @keyframes anim-3 {
+// 	0%, 66.66% { left: -100%; opacity: 0; }
+//   74.96%, 91.62% { left: 25%; opacity: 1; }
+//   100% { left: 110%; opacity: 0; }
+// }

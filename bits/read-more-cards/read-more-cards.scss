@@ -1,0 +1,411 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'bootstrap/mixins/breakpoints';
+
+// Edit $image-aspect to globally change the tese image depth.
+// All images will have the same aspect ratio.
+// Divide height by width (630 / 1200) for instance.
+// This is not pixels, this is a ratio.
+// Alternately, you can just plug in a ratio, e.g.
+// $image-aspect: .525;
+
+$image-aspect: ( 630 / 1200 );
+
+.read-more-cards {
+  width: auto;
+  margin-left:  auto;
+  margin-right: auto;
+  @include media-breakpoint-up(sm) {
+    width: $column-width-sm;
+  }
+  @include media-breakpoint-up(md) {
+    width: calc(100vw - 30px);
+  }
+  @include media-breakpoint-up(lg) {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100vw - 30px);
+  }
+  @include media-breakpoint-up(xl) {
+    width: 1200px;
+  }
+  .cards {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      display: -ms-flexbox; // IE10 fix
+      display: flex;
+    }
+    .card {
+      margin: 10px;
+      @include media-breakpoint-up(sm) {
+        margin: 10px 0;
+      }
+      @include media-breakpoint-up(md) {
+        width: 18.8%;
+        flex-basis: 50%;
+        margin: 0 1.5% 15px 0;
+        &:last-child {
+          margin-right: 0 !important;
+        }
+      }
+      overflow: hidden;
+      display: block;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+  &.card-count-6 {
+    .cards {
+      flex-wrap: wrap;
+      .card {
+        @include media-breakpoint-up(md) {
+          flex-basis: 32.3%;
+          &:nth-child(3n) {
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.read-more {
+  &-head {
+    font-size: 1.2rem;
+    margin-bottom: .4em;
+  }
+  &-graf {
+    font-size: .9rem;
+    font-family: $font-family-sans-serif;
+  }
+  &-head, &-graf, &-cards-hed {
+    padding: 0 10px;
+  }
+  @include media-breakpoint-up(sm) {
+    &-cards-hed {
+      padding: 0;
+    }
+  }
+  &-cards-img {
+    width: 100%;
+    background-size: cover;
+    height: 51vw;
+    height: calc((100vw - 20px) * #{$image-aspect});
+    @include media-breakpoint-up(sm) {
+      height: 255px;
+      height: calc(500px * #{$image-aspect});
+    }
+    @include media-breakpoint-up(md) {
+      height: 16vw;
+      height: calc(32vw * #{$image-aspect});
+    }
+    @include media-breakpoint-up(lg) {
+      height: 170px;
+      height: calc(970px * .333 * #{$image-aspect});
+    }
+    @include media-breakpoint-up(xl) {
+      height: 200px;
+      height: calc(1170px * .333 * #{$image-aspect});
+    }
+  }
+  &-cards-hed {
+    font-size: 2rem;
+  }
+}
+.read-more-cards.card-count {
+  &-2 {
+    @include media-breakpoint-up(md) {
+      .cards .card {
+        width: 48.7%;
+        margin-right: 2.5%;
+      }
+      width: $column-width-md;
+      .read-more {
+        &-cards-img {
+          height: 177px;
+          height: calc(342px * #{$image-aspect});
+        }
+      }
+    }
+  }
+  &-3 {
+    @include media-breakpoint-up(md) {
+      .cards .card {
+        width: 31.6%;
+        margin-right: 2.5%;
+      }
+    }
+  }
+  &-4 {
+    @include media-breakpoint-up(md) {
+      .cards .card {
+        width: 23%;
+        margin-right: 2.5%;
+      }
+      .read-more {
+        &-head {
+          font-size: 1.1rem;
+        }
+        &-graf {
+          font-size: .85rem;
+          line-height: 1.4;
+        }
+        &-head, &-graf {
+          padding: 0 5px;
+        }
+        &-cards-img {
+          width: 100%;
+          background-size: cover;
+          height: 12vw;
+          height: calc((25vw - 15px) * #{$image-aspect});
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .read-more {
+        &-cards-img {
+          height: 123px;
+          height: calc(281px * #{$image-aspect});
+        }
+        &-head {
+          font-size: 1.2rem;
+        }
+        &-graf {
+          font-size: .9rem;
+        }
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      .read-more {
+        &-cards-img {
+          height: 150px;
+          height: calc(285px * #{$image-aspect});
+        }
+      }
+    }
+  }
+  &-5 {
+    @include media-breakpoint-up(md) {
+      .read-more {
+        &-head {
+          font-size: .9rem;
+          margin: .6em 0 .4em;
+        }
+        &-graf {
+          font-size: .8rem;
+          line-height: 1.3;
+        }
+        &-head, &-graf {
+          padding: 0 5px;
+        }
+        &-cards-img {
+          width: 100%;
+          background-size: cover;
+          height: 9.3vw;
+          height: calc((20vw - 15px) * #{$image-aspect});
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .read-more {
+        &-cards-img {
+          height: 97px;
+          height: calc(186px * #{$image-aspect});
+        }
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      .read-more {
+        &-cards-img {
+          height: 119px;
+          height: calc(228px * #{$image-aspect});
+        }
+        &-head {
+          font-size: 1.1rem;
+        }
+        &-graf {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+
+a.card-link, a.card-link:hover, a.card-link:visited {
+  color: $gray-dark;
+}
+
+
+
+// PAGER FOLLOWS PAGER FOLLOWS PAGER FOLLOWS
+
+.pager {
+  transition: opacity .5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 110;
+  height: 0;
+  &-tese {
+    width: 175px;
+    img {
+      width: 1750px;
+    }
+    p, h5 {
+      color: #fff;
+      font-size: 12px;
+      font-family: $font-family-sans-serif;
+    }
+    p {
+      margin-top: 0.5em;
+      line-height: 1.4em;
+    }
+    h5 {
+      font-size: 17px;
+      margin: 10px 0 7px;
+      font-family: $font-family-sans-condensed;
+      text-transform: uppercase;
+    }
+  }
+  &-btn {
+    bottom: 20px;
+    margin-bottom: 185px;
+    height: 40px;
+    width: 30px;
+    position: fixed;
+    background-color: #222;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(120, 120, 120, .4);
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all .5s;
+    &:hover {
+      color: #fff;
+      opacity: 1;
+      height: 225px;
+      width: 220px;
+      margin-bottom: 0;
+    }
+    .pager-thumbnail {
+      height: calc(175px * #{$image-aspect});
+      background-size: cover;
+    }
+    span {
+      position: absolute;
+      left: -28px;
+      top: 80px;
+      font-size: 24px;
+      color: $grayaccent;
+    }
+    &>img {
+      width: 13px;
+      height: 100px;
+      margin-top: 40px;
+      margin-left: 10px;
+      opacity: 0.7;
+      position: absolute;
+    }
+    .background-image {
+      background: url('//tampabay.com/projects/assets/graphics/next-prev.svg') scroll no-repeat 0 -118px;
+      width: 17px;
+      height: 22px;
+      margin-left: 5px;
+    }
+    .background-image, .pager-btn>img {
+      position: absolute;
+      opacity: .7;
+      margin-top: 10px;
+    }
+    &.next {
+      float: right;
+      border-radius: 5px 0 0 5px;
+      // &.active {
+      //  border-radius: 9px 0 0 9px;
+      // }
+      border-width: 1px 0 1px 1px;
+      right: 0;
+      .background-image {
+        right: 4px;
+        background-position: -30px -118px;
+      }
+      span {
+        left: 175px;
+      }
+      .pager-tese {
+        // margin-right: 40px;
+        right: 30px;
+        float: right;
+        position: relative;
+      }
+    }
+    &.prev {
+      float: left;
+      border-radius: 0 5px 5px 0;
+      border-width: 1px 1px 1px 0;
+      left: 0;
+      .pager-tese {
+        margin-left: 30px;
+      }
+    }
+  }
+  &-overlay {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    display: block;
+    color: $lightgraytrans;
+  }
+  &-thumbnail {}
+}
+
+
+.prefooter {
+  width: 100%;
+  background-color: $lightgray;
+  padding: 10px 20px 0;
+  #subscribe-form {
+    #email { width: 100%; }
+  }
+}
+.anchored-pager {
+  p {
+    font-size: 0.9em;
+    font-family: $font-family-sans-serif;
+    line-height: 1.4em;
+    padding-top: 0.4em;
+  }
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+  align-items: stretch;
+}
+.pager-item {
+  margin: 0 5px 10px;
+  -webkit-flex: auto;
+  flex: auto;
+  padding: 10px 10px 0;
+  max-width: 16%; // this is a patch for bad flexbox behavior in IE10. It affects normal browsers. If, for some reason, it needs to change for regular browsers, I don't know how to fix IE10.
+  background-color: #E6E6E6;
+  h4 {
+    font-family: $font-family-sans-condensed;
+    text-transform: uppercase;
+  }
+  &.email {}
+  &.landing {}
+  &.schoolboard {}
+  &.comments {}
+  &.prev {}
+  &.next {}
+}

@@ -1,0 +1,31 @@
+@import 'partials/googlefonts';
+@import 'utilities/variables';
+@import 'bootstrap/bootstrap-modified';
+@import 'partials/typography';
+@import 'utilities/mixins';
+@import 'partials/base';
+@import 'partials/figures';
+@import 'partials/insets';
+@import 'partials/ads';
+// @import 'themes/breaking'; // bigger headlines — a work in progress
+// @import 'themes/dark'; // make dark page
+// @import 'themes/transparent-header'; // make transparent header
+
+// keep print last, please
+@import 'partials/print';
+
+// Order here is important.
+// If you move @imports around and it breaks, try ordering them:
+// googlefonts
+// variables
+// bootstrap-modified
+// typography
+// mixins
+// base
+// figures
+// insets
+// other partials
+// themes
+// print (LAST)
+
+// olive green accent color #566b51 
