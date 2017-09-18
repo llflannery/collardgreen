@@ -2,7 +2,7 @@
 // PAGE CONFIG
 const BLOCKS = [
   // `collardgreen/header`,
-  `collardgreen/home`
+  `collardgreen/about`
   // `collardgreen/footer`
 ];
 const STYLES = [

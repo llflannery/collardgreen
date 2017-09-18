@@ -1,12 +1,9 @@
 
-const join = require("path").join;
+const AmlResolver = require("lede").resolvers.AmlResolver;
 
 class SettingsConfig {
   constructor() {
-    this.context = {};
-    this.script = join(__dirname, "header.js");
-    this.style = join(__dirname, "header.scss");
-    this.html = join(__dirname, "header.html");
+    this.source = new AmlResolver("1LIPon_gDE4eak9BxsGHf-C1bpXd83uaxCJbE4Uj4IEk", process.env.GAPI_KEY);
   }
 }
 

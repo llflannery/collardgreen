@@ -11,6 +11,7 @@
 
 .content {
   // padding: 25% 10% 25% 10%;
+
 }
 
 
@@ -28,6 +29,7 @@
 
   .hed {
     color: white;
+    font-size: 1.5em;
   }
 }
 
@@ -36,6 +38,7 @@
   background-color: #292686;
    padding: 25%;
   height: 300px;
+  color: #ddda78;
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
     padding: 20%;
@@ -46,6 +49,7 @@
   background-color: #578aee;
   padding: 25%;
   height: 300px;
+  color: #ddda78;
 
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
@@ -57,6 +61,7 @@
   background-color: #a8cf99;
   padding: 25%;
   height: 300px;
+  color: #ddda78;
 
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;

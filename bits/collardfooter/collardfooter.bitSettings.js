@@ -4,9 +4,9 @@ const join = require("path").join;
 class SettingsConfig {
   constructor() {
     this.context = {};
-    this.script = join(__dirname, "header.js");
-    this.style = join(__dirname, "header.scss");
-    this.html = join(__dirname, "header.html");
+    this.script = join(__dirname, "collardfooter.js");
+    this.style = join(__dirname, "collardfooter.scss");
+    this.html = join(__dirname, "collardfooter.html");
   }
 }
 

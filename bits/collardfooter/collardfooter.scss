@@ -1,0 +1,52 @@
+.cfooter {
+  border-top: 1px solid #aaa;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+
+  font-family: 'open sans', sans-serif !important;
+
+  a {
+    display: block;
+  }
+}
+
+.contacttext {
+  text-align: center;
+  font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif !important;
+  margin-top: 1.5em;
+  color: #aaa;
+  // color: #18157C;
+}
+
+.contact {
+  // text-align: center;
+
+  i {
+    margin-right: 15px;
+  }
+
+  .col1 {
+    text-align: right;
+    width: 49%;
+    display: inline-block;
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .col2 {
+    width: 49%;
+    display: inline-block;
+    float: right;
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+      width: 100%;
+      display: block;
+      float: none;
+      text-align: center;
+    }
+  }
+}

@@ -28,4 +28,26 @@
 // themes
 // print (LAST)
 
-// olive green accent color #566b51 
+// olive green accent color #566b51
+a {
+  color: #18157C !important;
+  // font-family: 'open sans', sans-serif !important;
+}
+
+body {
+  padding-top: 0 !important;
+  background-color: rgb(255, 255, 255) !important;
+
+  // p {
+  //   font-family: 'open sans', sans-serif !important;
+  // }
+
+  h2, h3, h4 {
+    font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif !important;
+    color: #566b51;
+  }
+}
+
+.bump {
+  margin-top: 70px;
+}
