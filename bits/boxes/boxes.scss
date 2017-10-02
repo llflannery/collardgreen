@@ -10,7 +10,10 @@
 }
 
 .content {
-  // padding: 25% 10% 25% 10%;
+
+  i {
+    display: block;
+  }
 
 }
 
@@ -62,6 +65,10 @@
   padding: 25%;
   height: 300px;
   color: #ddda78;
+
+  .content {
+    color: white;
+  }
 
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;

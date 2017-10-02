@@ -24,13 +24,13 @@ const TWHED = ""; // serves as Twitter title if different than FB title.
 const DESCRIPTION = "";
 const YEAR = "2017";
 const NAME = "";
-const DEPLOY_PATH = "";
-const URL = `http://www.tampabay.com/projects/${YEAR}/${SECTION.toLowerCase()}/${PROJ_NAME.toLowerCase()}/${DEPLOY_PATH}`;
-const SOCIAL_IMG = "";
+const DEPLOY_PATH = "home";
+const URL = `http://www.tampabaycollardgreenfestival.org/${DEPLOY_PATH}`;
+const SOCIAL_IMG = `${URL}/social.jpg`;
 const IMG_WIDTH = "1200";
 const IMG_HEIGHT = "630";
 const AUTHOR = "";
-const TITLE = `${PROJ_NAME} | ${SECTION} | Tampa Bay Times`;
+const TITLE = `Tampa Bay Collard Green Festival`;
 
 // THE NITTY GRITTY – If everything above is set correctly, you shouldn't have to edit anything below this line
 
