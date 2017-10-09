@@ -37,10 +37,15 @@ a {
 .color {
   color: #292686;
   font-weight: bold;
+  display: block;
+}
+
+.color2 {
+  color: #578aee;
 }
 
 .center {
-  text-align: center;
+  margin-left: 2em;
   font-family: 'open sans', sans-serif !important;
 }
 

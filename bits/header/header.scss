@@ -1,6 +1,10 @@
 .header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+
+  @media screen and (min-width: 0px) and (max-width: 490px) {
+    padding-bottom: 27px;
+  }
 }
 
 .org {
@@ -11,10 +15,11 @@
 }
 
 .menu {
+  margin-top: .2em;
   font-family: 'open sans', sans-serif;
-  display: inline;
+  // display: inline;
   font-size: .8em;
-  // float: right;
+  float: right;
   a {
     margin-right: 1.4em;
   }
