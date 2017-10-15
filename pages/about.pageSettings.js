@@ -46,8 +46,8 @@ class SettingsConfig {
     this.resources = {
       head: [
         ...HEAD_RESOURCES,
-        '<script type="text/javascript" src="//cdn.gigya.com/js/gigya.js?apiKey=2_XVvcxIxG8cRaBYq3JyWKVSDhHbrBDJ78qOERcKaeWBTVH-aNjJPONe-sqQjvKmOp"></script>',
-        '<script type="text/javascript" src="//www.tampabay.com/projects/assets/analytics.js"></script>'
+        // '<script type="text/javascript" src="//cdn.gigya.com/js/gigya.js?apiKey=2_XVvcxIxG8cRaBYq3JyWKVSDhHbrBDJ78qOERcKaeWBTVH-aNjJPONe-sqQjvKmOp"></script>',
+        // '<script type="text/javascript" src="//www.tampabay.com/projects/assets/analytics.js"></script>'
       ],
       body: [
         ...BODY_RESOURCES,

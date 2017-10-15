@@ -15,6 +15,11 @@
     display: block;
   }
 
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+    font-size: calc(1vw * 1 + 14px)
+  }
+
+
 }
 
 
@@ -33,6 +38,10 @@
   .hed {
     color: white;
     font-size: 1.5em;
+
+    // @media screen and (min-width: 0px) and (max-width: 768px) {
+    //   font-size: 2em;
+    // }
   }
 }
 
@@ -45,6 +54,7 @@
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
     padding: 20%;
+    padding-top: 15%;
   }
 }
 
@@ -54,9 +64,16 @@
   height: 300px;
   color: #ddda78;
 
+  .try {
+    font-size: 15px;
+    display: block;
+    color: #ecea93;
+  }
+
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
     padding: 20%;
+    padding-top: 13%;
   }
 }
 
@@ -73,6 +90,7 @@
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
     padding: 20%;
+    padding-top: 15%;
   }
 }
 
@@ -85,5 +103,6 @@
   @media screen and (min-width: 0px) and (max-width: 768px) {
     height: 200px;
     padding: 20%;
+    padding-top: 15%;
   }
 }
