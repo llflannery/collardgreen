@@ -1,0 +1,27 @@
+.logoContainer {
+  max-width: 1000px;
+  margin: auto !important;
+}
+
+.logoHead {
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 4rem;
+  color: #578aee;
+  font-family: 'Lobster', cursive;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 3.3rem;
+  }
+}
+
+.logo {
+  margin: 1em;
+  display: inline-block;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 75% !important;
+  }
+}

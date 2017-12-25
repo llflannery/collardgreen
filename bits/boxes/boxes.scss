@@ -45,64 +45,38 @@
   }
 }
 
+.boxes {
+ padding: 25%;
+ height: 300px;
+ padding-top: 22%;
+
+   @media screen and (min-width: 0px) and (max-width: 768px) {
+     height: 200px;
+     padding: 20%;
+     padding-top: 15%;
+   }
+
+}
+
 
 .box1 {
   background-color: #292686;
-   padding: 25%;
-  height: 300px;
   color: #ddda78;
-  @media screen and (min-width: 0px) and (max-width: 768px) {
-    height: 200px;
-    padding: 20%;
-    padding-top: 15%;
-  }
+
 }
 
 .box2 {
   background-color: #578aee;
-  padding: 25%;
-  height: 300px;
   color: #ddda78;
 
-  .try {
-    font-size: 15px;
-    display: block;
-    color: #ecea93;
-  }
-
-  @media screen and (min-width: 0px) and (max-width: 768px) {
-    height: 200px;
-    padding: 20%;
-    padding-top: 13%;
-  }
 }
 
 .box3 {
   background-color: #a8cf99;
-  padding: 25%;
-  height: 300px;
-  color: #ddda78;
-
-  .content {
-    color: white;
-  }
-
-  @media screen and (min-width: 0px) and (max-width: 768px) {
-    height: 200px;
-    padding: 20%;
-    padding-top: 15%;
-  }
+  color: white;
 }
 
 .box4 {
   background-color: #ddda78;
-  padding: 25%;
-  height: 300px;
   color: white;
-
-  @media screen and (min-width: 0px) and (max-width: 768px) {
-    height: 200px;
-    padding: 20%;
-    padding-top: 15%;
-  }
 }

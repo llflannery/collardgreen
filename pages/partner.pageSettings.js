@@ -10,7 +10,9 @@ const STYLES = [
 ];
 const SCRIPTS = [];
 const ASSETS = [];
-const HEAD_RESOURCES = [];
+const HEAD_RESOURCES = [
+  '<script src="https://use.fontawesome.com/35527b8b20.js"></script>'
+];
 const BODY_RESOURCES = [];
 const META = [];
 
@@ -22,7 +24,7 @@ const TWHED = ""; // serves as Twitter title if different than FB title.
 const DESCRIPTION = "";
 const YEAR = "2017";
 const NAME = "";
-const DEPLOY_PATH = "";
+const DEPLOY_PATH = "partner";
 const URL = `http://www.tampabay.com/projects/${YEAR}/${SECTION.toLowerCase()}/${PROJ_NAME.toLowerCase()}/${DEPLOY_PATH}`;
 const SOCIAL_IMG = "";
 const IMG_WIDTH = "1200";

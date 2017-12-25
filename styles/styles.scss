@@ -28,6 +28,18 @@
 // themes
 // print (LAST)
 
+.divide {
+  margin-top: 3em;
+}
+
+.date {
+  font-size: 34px;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 24px;
+  }
+}
+
 // olive green accent color #566b51
 a {
   color: #18157C !important;

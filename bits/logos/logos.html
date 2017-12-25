@@ -1,0 +1,21 @@
+<div class="logoContainer fs">
+
+  <div class="logoHead">{{ $bit.head }}</div>
+
+{%- for each in $bit.logo %}
+
+<figure class="logo" style="max-width: {{ each.width }}%;">
+  <img
+    {% if each.directsrc %} src="{{ each.directsrc }}"{% else %}
+    src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.src | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.src | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.src | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.src | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.src | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.src | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1200w"
+    sizes="{% if each.small -%}
+    (min-width: 544px) 340px, calc(70vw - 20px)
+    {% else -%}
+    (min-width: 544px) 500px, 100vw
+    {%- endif %}{% endif %}"{% if each.alt %} alt="{{ each.alt }}"{% endif %}>
+
+</figure>
+
+{%- endfor %}
+
+</div>
