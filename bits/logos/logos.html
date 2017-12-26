@@ -2,8 +2,11 @@
 
   <div class="logoHead">{{ $bit.head }}</div>
 
+  <div class="logoBlurb">{{ $bit.logoblurb }}</div>
+
 {%- for each in $bit.logo %}
 
+<a href="{{ each.link }}">
 <figure class="logo" style="max-width: {{ each.width }}%;">
   <img
     {% if each.directsrc %} src="{{ each.directsrc }}"{% else %}
@@ -15,6 +18,7 @@
     {%- endif %}{% endif %}"{% if each.alt %} alt="{{ each.alt }}"{% endif %}>
 
 </figure>
+</a>
 
 {%- endfor %}
 

@@ -1,4 +1,4 @@
-<div class="fs lede{% if $bit.class %} {{ $bit.class }}{% endif %}">
+<div class="fs push wrap lede{% if $bit.class %} {{ $bit.class }}{% endif %}">
   <figure class="fixedimg" {% if $bit.srcid %} id="{{ $bit.srcid | slugify({ replacement: " _ ", lower: true })}}"{% else %} id="{{ $bit.src | slugify({ replacement: " _ ", lower: true })}}"{% endif %}>
     <img class="print-only" src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src | urlencode }}.{% if $bit.imgtype %}{{ $bit.imgtype }}{% else %}jpg{% endif %}">
     <div class="image{% if $bit.class %} {{ $bit.class }}{% endif %}" style="{% if $bit.height %} height: {{ $bit.height }};{% endif %}background-position: {% if $bit.backgroundpos %}{{ $bit.backgroundpos }};{% else %}50% 50%;{% endif %}" {%- if $bit.alt %} role="img" aria-label="{{ $bit.alt }}" {% endif %}>

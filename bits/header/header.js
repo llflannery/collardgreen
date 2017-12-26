@@ -1,4 +1,5 @@
 import $ from "jquery";
+import bigSlide from "./bigSlide.js"
 
 // Select all links with hashes
 $('a[href*="#"]')
@@ -36,3 +37,19 @@ $('a[href*="#"]')
       }
     }
   });
+
+
+  $(document).ready(function() {
+    // $('.menu-link').bigSlide({ easyClose: true, side: 'right' });
+
+    var bigSlideAPI = ($('.menu-link').bigSlide({
+    side: 'right',
+    easyClose: true,
+    menuWidth: "30%"
+    })).bigSlideAPI;
+    $('.menu-close').click(function() {
+      bigSlideAPI.view.toggleClose();
+    });
+
+
+});

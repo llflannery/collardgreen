@@ -24,3 +24,40 @@
     margin-right: 1.4em;
   }
 }
+
+.menu-close {
+  margin-left: 0.5em;
+  color: white;
+  font-size: 2em;
+}
+
+
+.panel {
+  z-index: 6;
+  background-color: #bbd0f8;
+
+  ul {
+    list-style: none;
+    height: 100vh;
+
+    li {
+      height: 25vh;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+      color: white !important;
+    }
+  }
+}
+
+.menu-link {
+  display: block;
+  float: right;
+}
+
+.wrap {
+    position: relative;
+}

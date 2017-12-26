@@ -1,11 +1,25 @@
 <div class="header fs">
   <a href="{{ $bit.orglink }}" class="org">{{ $bit.orgtext }} <span style="color:#566b51;">Presents</span></a>
 
-  <div class="menu">
+  <!-- <img class="menuimg" src=""> -->
+  <div href="#menu" class="menu-link"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+  <nav id="menu" class="panel" role="navigation">
+    <div class="menu-close"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+    <ul>
+        <li><a href="{{ $bit.linkto1 }}">{{ $bit.link1 }}</a></li>
+        <li><a href="{{ $bit.linkto2 }}">{{ $bit.link2 }}</a></li>
+        <li><a href="{{ $bit.linkto3 }}">{{ $bit.link3 }}</a></li>
+        <li><a href="{{ $bit.linkto4 }}">{{ $bit.link4 }}</a></li>
+    </ul>
+</nav>
+
+  <!-- <div class="menu">
     <a href="{{ $bit.linkto1 }}">{{ $bit.link1 }}</a>
     <a href="{{ $bit.linkto2 }}">{{ $bit.link2 }}</a>
     <a href="{{ $bit.linkto3 }}">{{ $bit.link3 }}</a>
     <a href="{{ $bit.linkto4 }}">{{ $bit.link4 }}</a>
-  </div>
+  </div> -->
 
 </div>

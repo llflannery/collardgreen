@@ -8,7 +8,9 @@ const BLOCKS = [
 const STYLES = [
   { id: "collardgreen/styles.scss" },
 ];
-const SCRIPTS = [];
+const SCRIPTS = [
+  { id: "collardgreen/bigSlide.js" },
+];
 const ASSETS = [];
 const HEAD_RESOURCES = [
   '<script src="https://use.fontawesome.com/35527b8b20.js"></script>'
