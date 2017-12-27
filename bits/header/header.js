@@ -44,8 +44,8 @@ $('a[href*="#"]')
 
     var bigSlideAPI = ($('.menu-link').bigSlide({
     side: 'right',
-    easyClose: true,
-    menuWidth: "30%"
+    easyClose: true
+    // menuWidth: "30%"
     })).bigSlideAPI;
     $('.menu-close').click(function() {
       bigSlideAPI.view.toggleClose();

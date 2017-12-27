@@ -26,11 +26,11 @@ const YEAR = "2017";
 const NAME = "";
 const DEPLOY_PATH = "partner";
 const URL = `http://www.tampabay.com/projects/${YEAR}/${SECTION.toLowerCase()}/${PROJ_NAME.toLowerCase()}/${DEPLOY_PATH}`;
-const SOCIAL_IMG = "";
+const SOCIAL_IMG = `${URL}/social.jpg`;
 const IMG_WIDTH = "1200";
 const IMG_HEIGHT = "630";
 const AUTHOR = "";
-const TITLE = `Partnerships - Tampa Bay Collard Green Festival`;
+const TITLE = `Sponsorships - Tampa Bay Collard Green Festival`;
 
 // THE NITTY GRITTY – If everything above is set correctly, you shouldn't have to edit anything below this line
 
