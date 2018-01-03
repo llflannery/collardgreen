@@ -10,6 +10,7 @@ const STYLES = [
 ];
 const SCRIPTS = [
   { id: "collardgreen/bigSlide.js" },
+  { id: "collardgreen/facebook.js" },
 ];
 const ASSETS = [];
 const HEAD_RESOURCES = [

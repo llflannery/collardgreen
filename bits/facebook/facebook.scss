@@ -1,0 +1,21 @@
+.facebook {
+  width: 340px !important;
+  margin-top: 3em;
+  position: absolute;
+  left: calc(((100% - 700px)/2 - 300px)/2);
+
+  @media screen and (min-width: 0px) and (max-width: 1400px) {
+    // position: initial;
+    // display: block;
+    display: none;
+  }
+}
+
+.facebookMobile {
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: 1401px) {
+    display: none;
+  }
+}
