@@ -82,3 +82,16 @@ body {
 .bump {
   margin-top: 70px;
 }
+
+.bumpspecial {
+  margin-top: 70px;
+
+
+  @media screen and (min-width: 770px) and (max-width: 1400px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 769px) {
+    margin-top: 0.5em;
+  }
+}
