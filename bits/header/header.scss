@@ -62,11 +62,11 @@
     height: 100vh;
 
     li {
-      height: 16vh;
+      height: 14vh;
       font-size: 1.5em;
 
       @media screen and (min-width: 0px) and (max-width: 500px) {
-        height: 17vh;
+        height: 13vh;
       }
     }
 
