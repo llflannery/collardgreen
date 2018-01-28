@@ -4,6 +4,10 @@
  # Works ok in Safari and great in Firefox.
  # Docs: https://docs.google.com/document/d/1R1OdNjrrFtgwxuF9nTvEU7S78x-yH2OZ1rq0CDgTZqY/edit#heading=h.i4hk1o460e0p
  #}
+
+{% if $bit.linkme %}
+  <a href="{{ $bit.linkme }}">
+{% endif %}
 <figure class="inset{% if $bit.class or $bit.float %}{% if $bit.class %} {{ $bit.class }}{% endif -%} {% if $bit.float %} inset-{{ $bit.float }}{% endif -%}{% endif -%}
   {% if $bit.small %} inset-small{% endif %}">
   <img
@@ -19,4 +23,6 @@
     {% if $bit.caption %}<div class="caption">{{ $bit.caption | safe }}</div>{% endif %}
   </figcaption>{% endif %}
 </figure>
-
+{% if $bit.linkme %}
+</a>
+{% endif %}

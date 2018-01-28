@@ -1,0 +1,19 @@
+<div class="fs newsclips">
+  {%- for each in $bit.clips %}
+
+  <div class="clip" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)),url( http://s3.amazonaws.com/ledejs/resized/collardgreen/480/{{each.thumb}}.jpg );">
+    <!-- <img
+      {% if each.directsrc %} src="{{ each.directsrc }}"{% else %}
+      src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.thumb | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.thumb | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1200w"
+      sizes="{% if each.small -%}
+      (min-width: 544px) 340px, calc(70vw - 20px)
+      {% else -%}
+      (min-width: 544px) 500px, 100vw
+      {%- endif %}{% endif %}"{% if each.alt %} alt="{{ each.alt }}"{% endif %}> -->
+      <div class="clipname">{{ each.name }}</div>
+      <p class="clipdate">{{ each.date }}</p>
+  </div>
+
+
+  {%- endfor %}
+</div>

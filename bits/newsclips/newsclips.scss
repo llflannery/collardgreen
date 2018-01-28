@@ -1,0 +1,43 @@
+.newsclips {
+  max-width: 1000px;
+  margin: 1em auto !important;
+
+
+  .clip {
+    width: 30%;
+    height: auto;
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+      width: 100%;
+    }
+
+
+    img {
+      width: 100%;
+    }
+
+    .clipname {
+      color: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding-top: 40%;
+      font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+      text-align: center;
+
+      @media screen and (min-width: 0px) and (max-width: 500px) {
+        padding-top: 15%;
+      }
+    }
+
+    .clipdate {
+      text-align: center;
+      color: white;
+      font-family: 'open sans', sans-serif;
+      padding-bottom: 15%;
+
+      @media screen and (min-width: 0px) and (max-width: 500px) {
+        padding-bottom: 10%;
+      }
+    }
+  }
+}
