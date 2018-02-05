@@ -28,6 +28,11 @@
 // themes
 // print (LAST)
 
+h1.news {
+  font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+  text-align: center;
+}
+
 .divide {
   margin-top: 3em;
 }
@@ -81,6 +86,10 @@ body {
 
 .bump {
   margin-top: 70px;
+}
+
+.bumpboth {
+  margin: 4em auto;
 }
 
 .bumpspecial {

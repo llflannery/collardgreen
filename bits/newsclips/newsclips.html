@@ -1,6 +1,6 @@
 <div class="fs newsclips">
   {%- for each in $bit.clips %}
-
+  <a href="{{ each.link }}">
   <div class="clip" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)),url( http://s3.amazonaws.com/ledejs/resized/collardgreen/480/{{each.thumb}}.jpg );">
     <!-- <img
       {% if each.directsrc %} src="{{ each.directsrc }}"{% else %}
@@ -13,6 +13,7 @@
       <div class="clipname">{{ each.name }}</div>
       <p class="clipdate">{{ each.date }}</p>
   </div>
+  </a>
 
 
   {%- endfor %}
