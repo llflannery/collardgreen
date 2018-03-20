@@ -4,11 +4,15 @@
 
 
   .clip {
-    width: 30%;
-    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    height: 300px;
+    margin-top: 15px;
 
     @media screen and (min-width: 0px) and (max-width: 500px) {
       width: 100%;
+      display: block;
     }
 
 
@@ -18,14 +22,16 @@
 
     .clipname {
       color: white;
+      text-shadow: 2px 2px black;
       font-weight: bold;
       font-size: 1.5em;
-      padding-top: 40%;
+      padding-top: 35%;
       font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
       text-align: center;
 
       @media screen and (min-width: 0px) and (max-width: 500px) {
-        padding-top: 15%;
+        padding-top: 25%;
+        font-size: 2.5em;
       }
     }
 

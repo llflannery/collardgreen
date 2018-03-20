@@ -1,7 +1,7 @@
 <div class="fs newsclips">
   {%- for each in $bit.clips %}
   <a href="{{ each.link }}">
-  <div class="clip" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)),url( http://s3.amazonaws.com/ledejs/resized/collardgreen/480/{{each.thumb}}.jpg );">
+  <div class="clip" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),url( http://s3.amazonaws.com/ledejs/resized/collardgreen/480/{{each.thumb}}.jpg );">
     <!-- <img
       {% if each.directsrc %} src="{{ each.directsrc }}"{% else %}
       src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ each.thumb | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ each.thumb | urlencode }}.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ each.thumb | urlencode }}-2x.{% if each.imgtype %}{{ each.imgtype }}{% else %}jpg{% endif %} 1200w"

@@ -1,0 +1,42 @@
+.surveyContainer {
+  display: block;
+}
+
+.survey {
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Lobster',cursive;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
+  }
+
+
+  &.one {
+    background-color: #578aee;
+  }
+
+  &.two {
+    background-color: #292686;
+  }
+
+  &.three {
+    background-color: #a8cf99;
+  }
+
+  &.four {
+    background-color: #ddda78;
+  }
+
+
+}

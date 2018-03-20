@@ -1,0 +1,14 @@
+.next-year {
+  font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+  max-width: 1000px;
+  margin: auto !important;
+  padding-top: 1em;
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  color: #578aee;
+
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    font-size: 2em;
+  }
+}
