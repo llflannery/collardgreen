@@ -2,7 +2,7 @@
 // PAGE CONFIG
 const BLOCKS = [
   // `collardgreen/header`,
-  `collardgreen/home`
+  `collardgreen/home19`,
   // `collardgreen/footer`
 ];
 const STYLES = [
@@ -27,8 +27,8 @@ const TWHED = ""; // serves as Twitter title if different than FB title.
 const DESCRIPTION = "Do you have the best collard greens in Tampa Bay? Register today!";
 const YEAR = "2017";
 const NAME = "";
-const DEPLOY_PATH = "archive18";
-const URL = `http://www.tampabaycollardgreenfestival.org/${DEPLOY_PATH}`;
+const DEPLOY_PATH = "home";
+const URL = `http://www.tampabaycollardgreenfestival.org/`;
 const SOCIAL_IMG = `${URL}/social.jpg`;
 const IMG_WIDTH = "1200";
 const IMG_HEIGHT = "630";
@@ -49,8 +49,7 @@ class SettingsConfig {
     this.resources = {
       head: [
         ...HEAD_RESOURCES,
-        // '<script type="text/javascript" src="//cdn.gigya.com/js/gigya.js?apiKey=2_XVvcxIxG8cRaBYq3JyWKVSDhHbrBDJ78qOERcKaeWBTVH-aNjJPONe-sqQjvKmOp"></script>',
-        // '<script type="text/javascript" src="//www.tampabay.com/projects/assets/analytics.js"></script>'
+        '<script type="text/javascript" src="//cdn.gigya.com/js/gigya.js?apiKey=2_XVvcxIxG8cRaBYq3JyWKVSDhHbrBDJ78qOERcKaeWBTVH-aNjJPONe-sqQjvKmOp"></script>',
       ],
       body: [
         ...BODY_RESOURCES,
