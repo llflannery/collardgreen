@@ -1,4 +1,17 @@
 <figure class="facebook fs">
+
+  <div class="logo">
+    <img
+      {% if $bit.directsrc %} src="{{ $bit.directsrc }}"{% else %}
+      src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src2 | urlencode }}-2x.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src2 | urlencode }}-2x.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 1200w"
+      sizes="{% if $bit.small -%}
+      (min-width: 544px) 340px, calc(70vw - 20px)
+      {% else -%}
+      (min-width: 544px) 500px, 100vw
+      {%- endif %}{% endif %}"{% if $bit.alt %} alt="{{ $bit.alt }}"{% endif %}>
+  </div>
+
+
   <div class="fb-page" data-href="https://www.facebook.com/TampaBayCGF/" data-tabs="timeline" data-small-header="false" width="300" height="100vh" data-hide-cover="false" data-show-facepile="true">
     <blockquote cite="https://www.facebook.com/TampaBayCGF/" class="fb-xfbml-parse-ignore">
       <a href="https://www.facebook.com/TampaBayCGF/">Tampa Bay Collard Green Festival, Inc</a>
@@ -7,6 +20,17 @@
 </figure>
 
 <figure class="facebookMobile">
+  <div class="logo">
+    <img
+      {% if $bit.directsrc %} src="{{ $bit.directsrc }}"{% else %}
+      src="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %}" srcset="//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 480w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 600w,//s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/480/{{ $bit.src2 | urlencode }}-2x.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 960w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/1024/{{ $bit.src2 | urlencode }}.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 1024w, //s3.amazonaws.com/ledejs/resized/{{ $PROJECT.$name | urlencode }}/600/{{ $bit.src2 | urlencode }}-2x.{% if $bit.imgtype2 %}{{ $bit.imgtype2 }}{% else %}jpg{% endif %} 1200w"
+      sizes="{% if $bit.small -%}
+      (min-width: 544px) 340px, calc(70vw - 20px)
+      {% else -%}
+      (min-width: 544px) 500px, 100vw
+      {%- endif %}{% endif %}"{% if $bit.alt %} alt="{{ $bit.alt }}"{% endif %}>
+  </div>
+
   <div class="fb-page" data-href="https://www.facebook.com/TampaBayCGF/" data-tabs="events" data-small-header="true" width="300" height="300" data-hide-cover="false" data-show-facepile="true">
     <blockquote cite="https://www.facebook.com/TampaBayCGF/" class="fb-xfbml-parse-ignore">
       <a href="https://www.facebook.com/TampaBayCGF/">Tampa Bay Collard Green Festival, Inc</a>
