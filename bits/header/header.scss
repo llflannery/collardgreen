@@ -13,18 +13,28 @@
   padding-bottom: .5em;
   // margin-left: 1em;
   // margin-right: 2em;
-  width: 89%;
+  width: 79%;
 }
 
 .menu-link {
   display: inline-block;
-  width: 10%;
+  width: 19%;
   text-align: right;
   padding-right: .2em;
   font-size: 2em;
   vertical-align: middle;
   color: #696969;
   // float: right;
+
+  span {
+    font-family: 'Fjalla One', 'PT Sans Narrow', sans-serif;
+    font-size: 0.8em;
+    vertical-align: middle;
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+      display: none;
+    }
+  }
 }
 
 .menu {
